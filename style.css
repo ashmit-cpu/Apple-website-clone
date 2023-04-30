@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(22, 22, 23, .8);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    position: fixed;
+    justify-content: space-evenly;
+
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+
+}
+
+/* li class styling */
+.dropdown {
+    color: gainsboro;
+
+
+}
+
+/* a tag styling */
+
+.dropdown .menu-btn {
+    color: gainsboro;
+    padding: 1rem;
+    margin-right: 2em;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    
+}
+
+
+/* apple logo    */
+.apple-logo,#openMenu {
+    color: gainsboro;
+    padding: 13px;
+    margin-right: 15px;
+
+}
+
+
+header #openMenu{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-content {
+
+    display: none;
+    width: 100%;
+    float: left;
+    background-color: rgb(43, 43, 43);
+    position: absolute;
+    left: 0;
+    height: 250px;
+
+
+}
+
+/* a tag links  */
+.menu-content a {
+    color: gainsboro;
+    padding: 5px 16px;
+    text-decoration: none;
+    float: left;
+
+}
+
+.dropdown:hover .menu-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dropdown .menu-btn:hover {
+    color: white;
+
+}
+
+
+/* iphone offer styling */
+
+.section-content {
+    background-color: white;
+    text-align: center;
+    color: #1d1d1f;
+    padding: 20px;
+    z-index: 10;
+    position: relative;
+    padding-top: 60px;
+
+}
+
+.dropdown .menu-btn:hover header {
+    background-color: black;
+}
+
+
+/* iPhone banner styling */
+
+.iphone-banner {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-banner .banner-links {
+    margin-bottom: 220px;
+    position: absolute;
+
+}
+
+.iphone-banner .banner-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2997ff;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+}
+
+.iphone-banner .banner-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+.iphone-banner .prod-img-mobile {
+    display: none;
+}
+
+/* iPhone-banner_1 styling */
+
+.iphone-banner_1 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.iphone-banner_1 .banner-links {
+    margin-bottom: 220px;
+    position: absolute;
+
+}
+
+.iphone-banner_1 .banner-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2997ff;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+}
+
+.iphone-banner_1 .banner-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media all and (max-width:768px) {
+
+    
+
+
+     header #openMenu{
+        display: block;
+    }
+     
+
+     /* to hide menu contents */
+
+     .header ul{
+        display: none;
+        background-color: #131313;
+        width: 100%;
+        position: absolute;
+        top:40px
+
+    }
+    header .navbar.active{
+        display: flex;
+        flex-direction: column ;
+        height: 90vh;
+    }
+
+    
+
+
+    header .navbar.active .menu-content{
+        display: none;
+    }
+
+
+    .section-content {
+        color: #1d1d1f;
+        padding: 8px;
+        z-index: 10;
+        position: relative;
+        padding-top: 55px;
+    
+    }
+    .section-content p{
+        font-size: 13px;
+    }
+
+    /* to hide banner image */
+    .iphone-banner .prod-image {
+        display: none;
+    }
+    /* to display mobile version banner image */
+    .iphone-banner .prod-img-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .iphone-banner .prod-img-mobile img{
+        width: 600px;
+    }
+
+
+    .iphone-banner_1 .prod-image img{
+        width: 500px;
+
+    } 
+
+
+    /* 1st banner links positioning */
+
+    .iphone-banner .banner-links{
+        margin-bottom: 150px;
+    }
+
+    
+    .iphone-banner .banner-links a{
+    font-size: 14px;
+    }
+
+    /* 2nd banner links positioning */
+
+
+    .iphone-banner_1 .banner-links{
+        margin-bottom: 80px;
+
+    }
+    .iphone-banner_1 .banner-links a{
+        font-size: 14px;
+        }
+
+     
+    
+    
+    
+
+
+}
