@@ -14,7 +14,6 @@ header {
     align-items: center;
     z-index: 99;
     position: fixed;
-    justify-content: space-evenly;
 
 }
 
@@ -45,12 +44,13 @@ header {
     letter-spacing: -.01em;
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
     line-height: 1;
-    
+
 }
 
 
 /* apple logo    */
-.apple-logo,#openMenu {
+.apple-logo,
+#openMenu {
     color: gainsboro;
     padding: 13px;
     margin-right: 15px;
@@ -58,7 +58,7 @@ header {
 }
 
 
-header #openMenu{
+header #openMenu {
     display: none;
     cursor: pointer;
 }
@@ -117,21 +117,39 @@ header #openMenu{
 
 /* iPhone banner styling */
 
-.iphone-banner {
+.iphone-banner,
+.iphone-banner_1,
+.iphone-banner_2 {
     display: flex;
     flex-direction: column;
-    background-color: black;
     justify-content: center;
     align-items: center;
 }
 
-.iphone-banner .banner-links {
-    margin-bottom: 220px;
-    position: absolute;
+
+/* giving banner bg color */
+
+.iphone-banner,
+.iphone-banner_2 {
+    background-color: black;
+}
+
+.iphone-banner_1 {
+    background-color: #fafafa;
 
 }
 
-.iphone-banner .banner-links a {
+
+
+
+
+
+/* banner-links styling */
+
+
+.iphone-banner .banner-links a,
+.iphone-banner_1 .banner-links a,
+.iphone-banner_2 .banner-links a {
     margin-right: 20px;
     text-decoration: none;
     color: #2997ff;
@@ -139,24 +157,19 @@ header #openMenu{
     font-size: 20px;
 }
 
-.iphone-banner .banner-links a:hover {
+.iphone-banner .banner-links a:hover,
+.iphone-banner_1 .banner-links a:hover,
+.iphone-banner_2 .banner-links a:hover {
     text-decoration: underline;
 }
 
 
-
-.iphone-banner .prod-img-mobile {
-    display: none;
-}
-
 /* iPhone-banner_1 styling */
 
-.iphone-banner_1 {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
+.iphone-banner .banner-links {
+    margin-bottom: 220px;
+    position: absolute;
+
 }
 
 .iphone-banner_1 .banner-links {
@@ -165,52 +178,98 @@ header #openMenu{
 
 }
 
-.iphone-banner_1 .banner-links a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #2997ff;
-    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
+
+.iphone-banner_2 .banner-links {
+    margin-bottom: 170px;
+    position: absolute;
+
 }
 
-.iphone-banner_1 .banner-links a:hover {
-    text-decoration: underline;
+.iphone-banner .prod-img-mobile {
+    display: none;
 }
 
+/* chevron-right arrow icon */
+.chevron-right {
+    font-size: 14px;
+}
+
+
+.iphone-banner_3 {
+    display:flex;
+    justify-content: center;
+  align-items: center;
+}
+
+
+.banner-col-1,
+.banner-col-2 {
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+}
+.banner-col-1 img, .banner-col-2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.banner-col-1{
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.banner-col-2{
+    background-color: black;
+    margin-right: 10px;
+
+}
+
+.iphone-banner_3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 
 
 @media all and (max-width:768px) {
 
-    
 
 
-     header #openMenu{
+
+    header #openMenu {
         display: block;
+        margin-left: 75%;
     }
-     
 
-     /* to hide menu contents */
 
-     .header ul{
-        display: none;
+
+    /* to hide menu contents */
+
+    .header ul {
         background-color: #131313;
         width: 100%;
         position: absolute;
-        top:40px
+        top: 40px;
+        transform: translateY(-200%);
+        transition: all 0.4s;
 
     }
-    header .navbar.active{
+
+    header .navbar.active {
         display: flex;
-        flex-direction: column ;
-        height: 90vh;
+        flex-direction: column;
+        height: 100vh;
+        transform: translateY(0%);
+
     }
 
-    
 
 
-    header .navbar.active .menu-content{
+
+    header .navbar.active .menu-content {
         display: none;
     }
 
@@ -221,9 +280,10 @@ header #openMenu{
         z-index: 10;
         position: relative;
         padding-top: 55px;
-    
+
     }
-    .section-content p{
+
+    .section-content p {
         font-size: 13px;
     }
 
@@ -231,6 +291,7 @@ header #openMenu{
     .iphone-banner .prod-image {
         display: none;
     }
+
     /* to display mobile version banner image */
     .iphone-banner .prod-img-mobile {
         display: flex;
@@ -238,43 +299,83 @@ header #openMenu{
         align-items: center;
 
     }
-    .iphone-banner .prod-img-mobile img{
-        width: 600px;
+
+    .iphone-banner .prod-img-mobile img {
+        width: 210px;
     }
 
 
-    .iphone-banner_1 .prod-image img{
-        width: 500px;
+    .iphone-banner_1 .prod-image img {
+        width: 270px;
 
-    } 
+    }
+
+    .iphone-banner_2 .prod-image img {
+        width: 240px;
+
+    }
 
 
     /* 1st banner links positioning */
 
-    .iphone-banner .banner-links{
+    .iphone-banner .banner-links {
         margin-bottom: 150px;
     }
 
-    
-    .iphone-banner .banner-links a{
-    font-size: 14px;
-    }
+
+
 
     /* 2nd banner links positioning */
 
 
-    .iphone-banner_1 .banner-links{
-        margin-bottom: 80px;
+    .iphone-banner_1 .banner-links {
+        margin-bottom: 90px;
 
     }
-    .iphone-banner_1 .banner-links a{
-        font-size: 14px;
-        }
 
-     
-    
-    
-    
+    /* 3nd banner links positioning */
+
+
+    .iphone-banner_2 .banner-links {
+        margin-bottom: 75px;
+
+    }
+
+    .iphone-banner .banner-links a,
+    .iphone-banner_1 .banner-links a,
+    .iphone-banner_2 .banner-links a {
+        font-size: 14px;
+    }
+
+    .chevron-right {
+        font-size: 10px;
+    }
+
+
+
+    .iphone-banner_3 {
+        display:flex;
+        justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .iphone-banner_3 .banner-col-2{
+        background-color: black;
+    }
+
+    .iphone-banner_3 .banner-col-2 img{
+        width: 100%;
+    }
+    .iphone-banner_3 .banner-col-1 img{
+        width: 100%;
+    }
+    .iphone-banner_3 .banner-col-2{
+        margin-left: 10px;
+    }
+
+
+
 
 
 }
