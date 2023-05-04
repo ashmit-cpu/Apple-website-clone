@@ -435,16 +435,21 @@ header .menu-content .menu-title{
 
 
     header{
-        justify-content: space-around;
+        justify-content:space-between;
     }
+
+    header .apple-logo{
+        margin-right: 50%;
+    }
+
 
     header #openMenu {
         display: block;
+        padding-right: 2px;
     }
     .menu-btn.search-bar{
         display: block;
-        margin-left: 139px;
-        margin-right: 1px;
+
     }
 
     #closeMenu {
@@ -457,8 +462,6 @@ header .menu-content .menu-title{
 
     .cart i{
         display: block;
-        margin-left: 5px;
-        margin-right: 5px;
     }
 
 
