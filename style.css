@@ -83,7 +83,7 @@ a.shop-iphone:hover{
 
 
 
-.menu-content {
+.dropdown .menu-content {
     transform: translateY(-120%);
     width: 100%;
     float: left;
@@ -96,6 +96,8 @@ a.shop-iphone:hover{
     transition-delay: 0.4s;
     padding: 60px 0 10px 170px;
     z-index: -1;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -128,15 +130,6 @@ header .menu-content .menu-title{
 
 
 
-
-
-
-
-
-
-
-
-
 /* a tag links  */
 .menu-content a {
     color: rgb(232, 232, 237);
@@ -151,23 +144,20 @@ header .menu-content .menu-title{
 }
 
 .dropdown:hover .menu-content {
-    flex-direction: column;
-    display: flex;
     transform: translateY(0%);
-
-
-
-
 
 }
 
 
 
-
-
-
 .dropdown .menu-btn:hover {
     color: white;
+
+
+}
+
+.dropdown .menu-btn:hover body{
+    background: black!important;
 
 }
 
@@ -412,7 +402,7 @@ header .menu-content .menu-title{
 
   .footer{
     background-color: gainsboro;
-    padding: 10vw;
+    padding:14vw;
     padding-bottom: 3vw;
     padding-top: 30px;
     text-align: justify;
@@ -425,7 +415,37 @@ header .menu-content .menu-title{
     padding-bottom: 50px;
   }
 
-  
+
+
+
+  /* footer links styling */
+
+  .footer-links{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0 25px 0;
+  }
+
+  .footer-links ul{
+    list-style: none;
+  }
+
+  .footer-links ul li a{
+    text-decoration: none;
+    color: gray;
+  }
+  .footer-links ul li a:hover{
+    text-decoration: underline;
+  }
+
+  .footer-links ul li{
+    padding-bottom: 17px;
+  }
+
+  .footer-links ul h4{
+    padding-bottom: 17px;
+  }
+ 
 
   
 
@@ -703,6 +723,10 @@ header .menu-content .menu-title{
         font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         color: rgb(110, 110, 115);
       }
+      .footer-links ul li a,.footer-links ul h4{
+        font-size: 9px;
+      }
+      
 
 
 

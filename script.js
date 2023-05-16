@@ -21,3 +21,5 @@ $('.main-carousel').flickity({
     lazyLoad:true,
     pauseAutoPlayOnHover: false
   });
+
+
