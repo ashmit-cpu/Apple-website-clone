@@ -586,12 +586,18 @@ header .menu-content .menu-title{
         transition: all 0.4s;
 
     }
+    header .navbar{
+        transition: all 0.7s ease-in-out;
+
+    }
+
 
     header .navbar.active {
         display: flex;
         flex-direction: column;
         height: 100vh;
         transform: translateY(0%);
+
 
     }
 
