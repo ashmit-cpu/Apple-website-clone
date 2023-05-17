@@ -22,4 +22,11 @@ $('.main-carousel').flickity({
     pauseAutoPlayOnHover: false
   });
 
+ $(document).ready(function(){
+    $('.menu-btn.search-bar').click(function(e){
+        e.preventDefault();
+        $('#search-input').focus();
+    })
+ })
+
 
