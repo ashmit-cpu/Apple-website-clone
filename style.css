@@ -431,6 +431,8 @@ header .menu-content .menu-title{
     display: flex;
     justify-content: space-between;
     padding: 25px 0 25px 0;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .footer-links ul{
@@ -815,6 +817,20 @@ header .menu-content .menu-title{
       }
       .footer-links ul li a,.footer-links ul h4{
         font-size: 9px;
+      }
+      .footer-links{
+
+        padding: 20px 0 20px 0;
+       
+      }
+
+      .footer-links ul li{
+        padding-bottom: 12px;
+      }
+    
+      .footer-links ul h4{
+        padding-bottom: 14px;
+        padding-top: 16px;
       }
       
 
